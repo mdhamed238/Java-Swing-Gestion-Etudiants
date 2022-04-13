@@ -43,7 +43,7 @@ public class Etudiant extends JFrame {
         JLabel lab7 = new JLabel("Annee");
         String annees[] = {"L1","L2","L3"};
 
-        JComboBox cb1 =new JComboBox(annees);
+        JComboBox cb1 = new JComboBox(annees);
         JLabel lab8 = new JLabel("Semester");
 
         String semestres[] = {"S1","S2","S3","S4","S5","S6"};
@@ -52,7 +52,7 @@ public class Etudiant extends JFrame {
         JPanel panelSaisie = new JPanel();
         panelSaisie.setBounds(5,90,370,420);
         panelSaisie.setBorder(new LineBorder(Color.PINK,2));
-        panelSaisie.setLayout(new GridLayout(8,2));
+        panelSaisie.setLayout(new GridLayout(8,2, 10, 20));
 
         panelSaisie.add(lab1);
         panelSaisie.add(nom);
@@ -95,7 +95,7 @@ public class Etudiant extends JFrame {
         String[] columnNames = {"Nom", "Prenom", "LieuNaiss", "dateNaiss", "NNI", "Tel","Annee","Semester"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
         JTable  table = new JTable(model);
-
+        
 
         paneltab.setLayout(new FlowLayout(FlowLayout.LEFT,1,1));
         paneltab.add(table.getTableHeader(), BorderLayout.NORTH);
@@ -134,11 +134,6 @@ public class Etudiant extends JFrame {
         panelbtn.add(b5);
         add(panelbtn);
 
-
-        setSize(1080, 640);
-        setLayout(null);
-        setVisible(true);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
 
         // button => ajouter
@@ -232,6 +227,11 @@ public class Etudiant extends JFrame {
                 dispose();
             }
         });
+
+        setSize(1020, 640);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
     }
     public static void main(String[] args){
