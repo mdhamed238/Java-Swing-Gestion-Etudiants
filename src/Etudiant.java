@@ -140,13 +140,7 @@ public class Etudiant extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-       /* nom.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Nom: " + nom.getText());
-            }
-        });
-*/
+
         // button => ajouter
         b1.addActionListener(new ActionListener() {
             @Override
